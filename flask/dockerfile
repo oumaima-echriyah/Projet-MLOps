@@ -2,10 +2,10 @@
 FROM python:3.9-slim
 
 # Définir le répertoire de travail à l'intérieur du conteneur
-WORKDIR /flaskapi/app
+WORKDIR /app
 
 # Copier les fichiers de l'application vers le répertoire de travail du conteneur
-COPY . /flaskapi/app
+COPY . /app
 
 # Installer les dépendances directement dans le Dockerfile
 RUN pip install --no-cache-dir \
