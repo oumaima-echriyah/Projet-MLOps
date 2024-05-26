@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Ouassim012/Projet-Machine-Learning']])
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/oumaima-echriyah/Projet-MLOps']])
             }
         }
         stage('Login to Docker Hub') {
@@ -19,17 +19,18 @@ pipeline {
         stage('Build Docker image for Fast API') {
             steps {
                 script {
-                    bat 'docker build -t oumaima778/fastapi-app -f Fast-API/dockerfile .'
+                    bat 'docker build -t oumaima778/fastapi-app Fast-API'
                 }
             }
         }
+        
         stage('Build Docker image for Flask API') {
             steps {
                 script {
-                    bat 'docker build -t oumaima778/flaskapi-app -f flask/dockerfile .'
+                    bat 'docker build -t oumaima778/flaskapi-app flask'
                 }
             }
-        } 
+        }
         stage('Push Fast API image to Hub') {
             steps {
                 script {
@@ -44,5 +45,19 @@ pipeline {
                 }
             }
         }
-    }
+        stage('Push flassk to k8s') {
+            steps {
+                script {
+                    kubernetesDeploy (configs: 'flask/deployment-flaskapi.yaml',kubeconfigId: 'k8sconfig')
+                }
+            }
+        }
+         stage('Push Fast to k8s') {
+            steps {
+                script {
+                    kubernetesDeploy (configs: 'Fast-API/deployment-fastapi.yaml',kubeconfigId: 'k8sconfig')
+                }
+            }
+        }
+}
 }
