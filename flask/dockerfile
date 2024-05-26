@@ -9,24 +9,7 @@ COPY . /app
 
 # Installer les dépendances directement dans le Dockerfile
 RUN pip install --no-cache-dir \
-    blinker==1.8.2 \
-    certifi==2024.2.2 \
-    charset-normalizer==3.3.2 \
-    click==8.1.7 \
-    Flask==3.0.3 \
-    idna==3.7 \
-    itsdangerous==2.2.0 \
-    Jinja2==3.1.4 \
-    joblib==1.4.2 \
-    MarkupSafe==2.1.5 \
-    numpy==1.26.4 \
-    pefile==2023.2.7 \
-    requests==2.32.2 \
-    scikit-learn==1.3.2 \
-    scipy==1.13.0 \
-    threadpoolctl==3.5.0 \
-    urllib3==2.2.1 \
-    Werkzeug==3.0.3
+    Flask==3.0.3
 
 # Exposer le port 5000 pour Flask
 EXPOSE 5000
