@@ -17,7 +17,7 @@ spec:
         image: oumaima778/fastapi-app:latest
         ports:
         - containerPort: 8000
-        imagePullPolicy: Always  # Ajout de la politique de pull de l'image
+
 ---
 apiVersion: v1
 kind: Service

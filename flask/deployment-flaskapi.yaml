@@ -17,7 +17,7 @@ spec:
         image: oumaima778/flaskapi-app:latest
         ports:
         - containerPort: 5000
-        imagePullPolicy: Always  # Ajout de la politique de pull de l'image
+        # Ajout de la politique de pull de l'image
 ---
 apiVersion: v1
 kind: Service
