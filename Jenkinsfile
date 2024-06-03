@@ -33,7 +33,7 @@ pipeline {
         stage('Build Docker image for Angular') {
             steps {
                 script {
-                    bat 'docker build -t oumaima778/frontend-app frontend'
+                    bat 'docker build -t oumaima778/frontend-app Frontend'
                 }
             }
         }
@@ -61,21 +61,21 @@ pipeline {
         stage('Deploy Flask API to Kubernetes') {
             steps {
                 script {
-                    kubernetesDeploy(configs: 'flask/deployment-flaskapi.yaml', kubeconfigId: 'k8sconfig')
+                    kubernetesDeploy(configs: 'flask/deployment-flaskapi.yaml', kubeconfigId: 'kk88')
                 }
             }
         }
         stage('Deploy Fast API to Kubernetes') {
             steps {
                 script {
-                    kubernetesDeploy(configs: 'Fast-API/deployment-fastapi.yaml', kubeconfigId: 'k8sconfig')
+                    kubernetesDeploy(configs: 'Fast-API/deployment-fastapi.yaml', kubeconfigId: 'kk88')
                 }
             }
         }
         stage('Deploy Angular to Kubernetes') {
             steps {
                 script {
-                    kubernetesDeploy(configs: 'frontend/deployment-frontend.yaml', kubeconfigId: 'k8sconfig')
+                    kubernetesDeploy(configs: 'Frontend/deployment-frontend.yaml', kubeconfigId: 'kk88')
                 }
             }
         }
