@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: frontend-deployment
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: frontend
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: frontend-container
-        image: oumaima778/frontend:latest
+        image: oumaima778/frontend-app:latest
         ports:
         - containerPort: 4200
 

@@ -75,7 +75,7 @@ pipeline {
         stage('Deploy Angular to Kubernetes') {
             steps {
                 script {
-                    kubernetesDeploy(configs: 'Frontend/deployment-frontend.yaml', kubeconfigId: 'kk88')
+                    kubernetesDeploy(configs: 'Frontend/deployment-angular.yaml', kubeconfigId: 'kk88')
                 }
             }
         }
