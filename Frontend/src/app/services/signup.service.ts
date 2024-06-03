@@ -12,7 +12,7 @@ interface User {
 })
 
 export class SignupService {
-  private apiUrl = 'http://localhost:8000/users/';
+  private apiUrl = 'http://fastapi-service:8000/users/';
 
   constructor(private http: HttpClient) { }
   createUser(user: User): Observable<any> {
@@ -21,6 +21,6 @@ export class SignupService {
   }
   login(credentials: { email: string; password: string }): Observable<any> {
     console.log(credentials)
-    return this.http.post<any>('http://localhost:8000/users/login/', credentials);
+    return this.http.post<any>('http://fastapi-service:8000/users/login/', credentials);
   }
 }
