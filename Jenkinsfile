@@ -23,11 +23,17 @@ pipeline {
                 }
             }
         }
-        
         stage('Build Docker image for Flask API') {
             steps {
                 script {
                     bat 'docker build -t oumaima778/flaskapi-app flask'
+                }
+            }
+        }
+        stage('Build Docker image for Angular') {
+            steps {
+                script {
+                    bat 'docker build -t oumaima778/frontend-app frontend'
                 }
             }
         }
@@ -38,26 +44,40 @@ pipeline {
                 }
             }
         }
-       stage('Push Flask API image to Hub') {
+        stage('Push Flask API image to Hub') {
             steps {
                 script {
                     bat 'docker push oumaima778/flaskapi-app'
                 }
             }
         }
-        stage('Push flassk to k8s') {
+        stage('Push Angular image to Hub') {
             steps {
                 script {
-                    kubernetesDeploy (configs: 'flask/deployment-flaskapi.yaml',kubeconfigId: 'k8sconfig')
+                    bat 'docker push oumaima778/frontend-app'
                 }
             }
         }
-         stage('Push Fast to k8s') {
+        stage('Deploy Flask API to Kubernetes') {
             steps {
                 script {
-                    kubernetesDeploy (configs: 'Fast-API/deployment-fastapi.yaml',kubeconfigId: 'k8sconfig')
+                    kubernetesDeploy(configs: 'flask/deployment-flaskapi.yaml', kubeconfigId: 'k8sconfig')
                 }
             }
         }
-}
+        stage('Deploy Fast API to Kubernetes') {
+            steps {
+                script {
+                    kubernetesDeploy(configs: 'Fast-API/deployment-fastapi.yaml', kubeconfigId: 'k8sconfig')
+                }
+            }
+        }
+        stage('Deploy Angular to Kubernetes') {
+            steps {
+                script {
+                    kubernetesDeploy(configs: 'frontend/deployment-frontend.yaml', kubeconfigId: 'k8sconfig')
+                }
+            }
+        }
+    }
 }

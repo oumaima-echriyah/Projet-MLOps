@@ -1,0 +1,106 @@
+<main>
+  <nav><a  style="text-decoration: none;" href="" class="logo">
+    <h1><span >DITICTIFY</span></h1>
+  </a></nav>
+
+  <div class="signup" [@slideInDiagonal] [formGroup]="signupForm">
+    <h1>Sign-up</h1>
+    <div class="flex mt-6 space-x-1">
+      <div class="flex-1 ml-4 " s>
+        <label for="first-name" class="block text-sm font-medium leading-6 text-gray-500 ">First name</label>
+        <div class="mt-2">
+            <input formControlName="firstName" style="width: 175px;" type="text" name="first-name" id="first-name" placeholder="First-name" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 w-41 bg-gray-100 focus:bg-white">
+        </div>
+      </div>
+
+      <div class="flex-1 -ml-10 mt-0">
+        <label for="last-name" class="block text-sm font-medium leading-6 text-gray-500">Last name</label>
+        <div class="mt-2">
+          <input formControlName="lastName" style="width: 175px;" type="text" name="last-name" id="last-name" placeholder="Last-name" autocomplete="family-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 w-40 bg-gray-100 focus:bg-white">
+        </div>
+      </div>
+    </div>
+    <div class="sm:col-span-4 ml-5 mt-1 ">
+      <label for="email" class="block text-sm font-medium leading-6 text-gray-500">Email </label>
+      <div class="mt-2">
+        <input formControlName="email" placeholder="Email address" style="width: 370px;" id="email" name="email" type="email" autocomplete="email" class="block  rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 w-370 bg-gray-100 focus:bg-white font-medium ">
+      </div>
+    </div>
+
+    <div class="sm:col-span-4 ml-5 mt-1 ">
+      <label for="email" class="block text-sm font-medium leading-6 text-gray-500">Password </label>
+      <div class="mt-2">
+        <input formControlName="password" placeholder="Password" style="width: 370px;" id="pass" name="email" type="password" autocomplete="email" class="block  rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 w-370 bg-gray-100 focus:bg-white font-medium ">
+      </div>
+    </div>
+    <button type="submit" id="botona" (click)="onSubmit()" style="width: 370px;" class="rounded-md bg-[#fe3f40] px-3 py-2 text-sm font-semibold text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 mt-4 ml-5 bg-default-900 bg-black-500 shadow-lg shadow-gray-500/100 ">Create Account</button>
+
+    <p style="width: 370px; font-size: 0.8rem;" class="text-gray-500 text-sm mt-4 ml-5">By clicking "Create account" above, you acknowledge that you will receive updates from Our application to let you know of the latest news of AI and cybersecurity </p>
+    <hr class="border-gray border-t-2 my-3  w-[370px] ml-4">
+    <p class="ml-5 -mt-0 text-[0.9rem]">Already Have an account             <button type="button" class="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 ml-[130px]" ><a routerLink="/Login" style="text-decoration: none ; color: black">Sign In</a></button>
+    </p>
+  </div>
+
+
+  <div id="car" class=" ml-[650px] -mb-[450px] w-[41%] h-[80%] overflow-hidden relative" [@slideInDiagonal]>
+    <div class="carousel-items flex transition-transform duration-1000">
+
+  <div class="carousel-itemm">
+    <div class="relative">
+      <img id="image" class="w-[140px] ml-[170px] relative z-10" src="assets/images/Default_german_person_guide_2.png">
+      <div id="back" class="absolute top-6 left-[187px] w-[140px] h-full z-0"></div>
+      <div id="backs" class="absolute top-6 left-[199px] w-[140px] h-full z-0"></div>
+    </div>
+    <p class="font-semibold w-[80%] ml-[50px] text-[15px]  -mt-[50px] text-center font-sans">AI and cybersecurity converge to form an indomitable force, revolutionizing how we protect and optimize our digital ecosystems.productivity becomes not just a goal, but a natural outcome. </p>
+    <p class="text-center text-sm font-semibold mt-4"><img class=" ism3" src="assets/images/linkedin_1384088.png" > Oumaima Echriyah </p>
+    <p class="text-center text-sm mt-2 text-gray-500">Fst's Student,Software Engineer</p>
+
+
+  </div>
+  <div class="carousel-itemm">
+    <div class="relative">
+      <img id="image" class="w-[140px] ml-[170px] relative z-10" src="assets/images/Default_german_person_guide_2.png">
+      <div id="back" class="absolute top-6 left-[187px] w-[140px] h-full z-0"></div>
+      <div id="backs" class="absolute top-6 left-[199px] w-[140px] h-full z-0"></div>
+    </div>
+    <p class="font-semibold w-[80%] ml-[50px] text-[15px]  -mt-[50px] text-center font-sans">AI and cybersecurity converge to form an indomitable force, revolutionizing how we protect and optimize our digital ecosystems.productivity becomes not just a goal, but a natural outcome. </p>
+    <p class="text-center text-sm font-semibold mt-4"><img class=" ism3" src="assets/images/linkedin_1384088.png" > Ouassim Assoufi </p>
+    <p class="text-center text-sm mt-2 text-gray-500">Fst's Student,Software Engineer</p>
+
+
+  </div>
+  <div class="carousel-itemm">
+    <div class="relative">
+      <img id="image" class="w-[140px] ml-[170px] relative z-10" src="assets/images/Default_german_person_guide_2.png">
+      <div id="back" class="absolute top-6 left-[187px] w-[140px] h-full z-0"></div>
+      <div id="backs" class="absolute top-6 left-[199px] w-[140px] h-full z-0"></div>
+    </div>
+    <p class="font-semibold w-[80%] ml-[50px] text-[15px]  -mt-[50px] text-center font-sans">AI and cybersecurity converge to form an indomitable force, revolutionizing how we protect and optimize our digital ecosystems.productivity becomes not just a goal, but a natural outcome. </p>
+    <p class="text-center text-sm font-semibold mt-4"><img class=" ism3" src="assets/images/linkedin_1384088.png" > Hicham Fassali </p>
+    <p class="text-center text-sm mt-2 text-gray-500">Fst's Student,Software Engineer</p>
+
+
+  </div>
+  <div class="carousel-itemm">
+    <div class="relative">
+      <img id="image" class="w-[140px] ml-[170px] relative z-10" src="assets/images/Default_german_person_guide_2.png">
+      <div id="back" class="absolute top-6 left-[187px] w-[140px] h-full z-0"></div>
+      <div id="backs" class="absolute top-6 left-[199px] w-[140px] h-full z-0"></div>
+    </div>
+    <p class="font-semibold w-[80%] ml-[50px] text-[15px]  -mt-[50px] text-center font-sans">AI and cybersecurity converge to form an indomitable force, revolutionizing how we protect and optimize our digital ecosystems.productivity becomes not just a goal, but a natural outcome. </p>
+    <p class="text-center text-sm font-semibold mt-4"><img class=" ism3" src="assets/images/linkedin_1384088.png" > Amal Abghouni </p>
+    <p class="text-center text-sm mt-2 text-gray-500">Fst's Student,Software Engineer</p>
+
+
+  </div>
+
+ 
+</div>
+<p class="text-center text-[15px] ml-[95px] mt-[30px] mb-[10px] mbfont-normal font-sans  w-[60%]"><span id="span">200,000+ </span> malwares exists in our real world , that cause some majors issues. </p>
+<div class="flex space-x-20 ml-[100px] mt-[10px] ">
+  <img src="assets/images/py.png" id="image" class="w-[40px] colorize" >
+  <img src="assets/images/image-pro.png" class="w-[40px]">
+  <img src="assets/images/AI.png" class="w-[40px]">
+</div>
+  </div>
+</main>

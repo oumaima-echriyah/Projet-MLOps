@@ -1,0 +1,53 @@
+<header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo">
+              <h4><span>DITICTIFY</span></h4>
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+              <li class="scroll-to-section"><a href="#about">About Us</a></li>
+              <li class="scroll-to-section"><a href="#services">Services</a></li>
+              <li class="scroll-to-section"><a href="#portfolio">Portfolio</a></li>
+              <li class="scroll-to-section"><a href="#blog">Message Us</a></li> 
+              <li class="scroll-to-section"><a href="#contact"></a></li> 
+              <li class="scroll-to-section"><div class="main-red-button"><a href="#contact">Login</a></div></li> 
+            </ul>        
+            <a class='menu-trigger'>
+                <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+<div class="wrapper">
+    <div class="container">
+      <!-- Display the response message with conditional styling -->
+      <div class="response-message" [ngStyle]="{'background-color': isMalware() ? 'red' : isLegitimate() ? 'green' : 'transparent', 'height': isMalware() || isLegitimate() ? '100px' : 'auto', 'text-align': 'center', 'display': 'flex', 'align-items': 'center', 'justify-content': 'flex-end'}">
+        <p style="font-size: 36px; margin-right: 20px;">{{ response?.filename }} {{ response?.result }}</p>
+      </div>
+      <h1 style="font-size: 48px; text-align: center;">Upload a PE file</h1>
+      <div class="upload-container" 
+        (drop)="onFileDropped($event)" 
+        (dragover)="onDragOver($event)" 
+        (dragleave)="onDragLeave($event)" 
+        [class.dragging]="isDragging">
+        <div class="border-container">
+          <div class="image-container">
+            <img src="assets/images/Picture1.png" alt="Upload Icon">
+          </div>
+          <input type="file" id="file-upload" (change)="onFileSelected($event)" style="opacity: 0;">
+          <p>Drag and drop files here, or 
+            <a href="#" (click)="triggerFileInput($event)" id="file-browser">browse</a> your computer.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  

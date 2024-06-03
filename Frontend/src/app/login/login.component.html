@@ -1,0 +1,122 @@
+<div id="popupContainer" class="popup-container" #popupContainer>
+	<div id="popup" class="popup">
+	  <div class="popup-content">
+		<h2>Hello There Would you please Log in so you can reache our application features<img id="hello-img" src="assets/images/wink_166519.png" alt="Hello Image" class="ml-[140px]"> </h2>
+
+		<button id="closeBtn" (click)="hidePopup()" >Ok</button>
+	  </div>
+	</div>
+  </div>
+  <div class="login-admin">
+    <div class="imagelogin">
+    <img src="assets/images/background.png">
+     <!-- <div class="tip-container">
+      <div class="tip-bubble">
+      <p>Tip of the Day</p>
+      </div>
+    </div>-->
+
+    </div>
+    <div class="sign">
+    <h1>LOGIN</h1>
+    <h2>Thanks for your visiting</h2>
+    <form action="#" [formGroup]="loginForm" (ngSubmit)="login()">
+
+    <div>
+    <label for="email">Email:</label>
+    <input type="Email" formControlName="email"  name="email" placeholder="Email Address">
+    </div>
+    <div>
+    <label for="password">Password:</label>
+    <input type="password" formControlName="password"  name="password" placeholder="Enter The Password">
+    </div>
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider"></span>
+    </label>
+    <span id="span">Remember Me <a href="#">Forget Password ?</a>
+    </span>
+    <input class="botona" id="sign" type="submit" value="Sign in">
+    </form  >
+    <button id="signgoogle" type="submit">
+      <img src="assets/images/google_300221.png" alt="Dentist Image">
+      Sign with Google
+    </button>
+
+    </div>
+    <!--
+
+    <div class="sign">
+      <h1>LOGIN</h1>
+      <h2>Nice To See You Again Doc</h2>
+      <form [formGroup]="adminForm" (ngSubmit)="onSubmit()" action="#">
+
+      </form>
+    </div>-->
+    </div>
+    <!--
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page Design | Figma to HTML using bootstrap</title>
+    </head>
+    <body>
+
+    <div class="section login-page container-fluid">
+      <div class="row aligh-item-center">
+      <div class="col-sm-3 p-0">
+        <div class="login-form">
+        <div class="logo">
+          <a href="index.html" class="">
+          <img src="https://svgshare.com/i/nEz.svg" alt="">
+          </a>
+        </div>
+        <div class="page-heading">
+          <h2>Login into your account</h2>
+        </div>
+        <form action="">
+          <div class="login-form-items">
+          <div class="items">
+          <label for="">Email Address</label>
+          <div class="input">
+            <input type="text" placeholder="Email Address">
+            <i class="ri-mail-line"></i>
+          </div>
+          </div>
+          <div class="items">
+          <label for="">Password</label>
+          <div class="input">
+            <input type="text" placeholder="Enter your password">
+            <i class="ri-lock-line"></i>
+          </div>
+          </div>
+          <div class="text-end forgot-password">
+          <a href="">Forgot Password?</a>
+          </div>
+          <div class="form-signin">
+          <button class="btn">Login Now</button>
+          </div>
+          <div class="or-option">
+          <p>or</p>
+          </div>
+          <div class="form-signup">
+          <button class="btn">Signup Now</button>
+          </div>
+        </div>
+        </form>
+        </div>
+      </div>
+      <div class="col-sm-9">
+        <div class="login-extra">
+        <img src="https://svgshare.com/i/nDi.svg" alt="">
+        </div>
+      </div>
+      </div>
+    </div>
+
+    </body>
+    </html>
+    -->

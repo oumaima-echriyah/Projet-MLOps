@@ -1,0 +1,83 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo">
+              <h4><span>DITICTIFY</span></h4>
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+              <li class="scroll-to-section"><a href="#about">About Us</a></li>
+              <li class="scroll-to-section"><a href="#services">Services</a></li>
+              <li class="scroll-to-section"><a href="#portfolio">Portfolio</a></li>
+              <li class="scroll-to-section"><a href="#blog">Message Us</a></li> 
+              <li class="scroll-to-section"><a href="#contact"></a></li> 
+              <li class="scroll-to-section"><div class="main-red-button"><a href="#contact">Login</a></div></li> 
+            </ul>        
+            <a class='menu-trigger'>
+                <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+<div class="container center class1" style="margin-top: 130px; margin-left:40px">
+    <div class="row"style="margin-top: 30px;" >
+        <div class="col-md-12 text-center">
+            <h1 class="white">Image-Based Malware Detection</h1>
+            <p class="white">This application allows you to upload images for malware detection.</p>
+        </div>
+    </div>
+  
+    <div class="row">
+        <div class="col-md-6 mx-auto"> 
+        <div class="btn-container text-center"> <!-- Pour centrer horizontalement -->
+          <h1 class="imgupload"><i class="fa fa-file-image-o"></i></h1>
+          <h1 class="imgupload ok"><i class="fa fa-check"></i></h1>
+          <h1 class="imgupload stop"><i class="fa fa-times"></i></h1>
+          <p id="namefile">Only pics allowed! (jpg,jpeg,bmp,png)</p>
+          <button type="button" id="btnup" class="btn btn-primary btn-lg" (click)="triggerFileInput()">Browse for your pic!</button>
+          <input type="file" name="fileup" id="fileup" (change)="onFileSelected($event)">
+        </div>
+      </div>
+    </div>
+  
+  
+    <div class="row">
+      <div class="col-md-12 text-center"> <!-- Pour centrer horizontalement -->
+        <input type="submit" value="Submit!" class="btn btn-primary" id="submitbtn">
+        <button type="button" class="btn btn-default" disabled="disabled" id="fakebtn">Submit! <i class="fa fa-minus-circle"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container ">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="text-center white mt-5">Malware Detection Results</h2>
+            <div class="table-responsive " >
+                <table class="table table-striped table-bordered mt-3" style="margin-left: 70px;">
+                    <thead>
+                        <tr>
+                            <th>Malware</th>
+                            <th>Probability</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let malware of malwareResults | keyvalue">
+                            <td>{{ malware.key }}</td>
+                            <td>{{ malware.value }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

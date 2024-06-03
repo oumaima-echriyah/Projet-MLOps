@@ -1,0 +1,188 @@
+main{
+  background: #f6f5f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+}
+main nav{
+  height: 70px;
+  margin-top: -70vh;
+}
+main nav img{
+  height: 40px;
+}
+main .signup{
+  border-radius: 10px;
+  background-color: white;
+  height: 85%;
+  width: 33%;
+  position: absolute;
+  margin-left: -50vw;
+  margin-top: 60px;
+
+}
+.signup h1{
+  padding-left: 25px;
+  padding-top: 10px;
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+}
+.input-with-content {
+  background-color: white;
+}
+input::placeholder {
+  font-weight: 100;
+  /* Add other styles as needed */
+}
+#span{
+  background: #121FCF;
+  background: linear-gradient(93.51deg, #fe3f40 2.84%, #03a4ed 99.18%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+#car{
+  box-shadow: 0px 4px 30px -7px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 4px 30px -7px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 4px 30px -7px rgba(0,0,0,0.75);
+  border-radius: 10px;
+
+}
+#back{
+  border-radius: 55% 45% 56% 44% / 55% 38% 62% 45%  ;
+  background-color: coral;
+  width: 100px;
+  height: 100px;
+
+}
+.logo h1 span {
+  /* Dégradé de couleur */
+  background: linear-gradient(93.51deg, #fe3f40 2.84%, #03a4ed 99.18%);
+  /* Rendre le texte transparent */
+  -webkit-background-clip: text;
+  background-clip: text;
+  
+  /* Définir la couleur de remplissage du texte */
+  -webkit-text-fill-color: transparent;
+  font-size: 22px;
+  font-weight: 600;
+}
+#backs{
+  border-radius: 50% 50% 56% 44% / 63% 34% 66% 37%  ;
+  background-color: #CF1512;
+  width: 100px;
+  height: 100px;
+}
+.colorize {
+  filter: hue-rotate(180deg); /* Rotate the hue by 180 degrees (change this value to adjust the color) */
+}
+.carousel-items {
+  animation: moveCarousel 7s linear infinite;
+}
+
+@keyframes moveCarousel {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.carousel-itemm {
+  min-width: 100%;
+}
+
+.carousel-items {
+  animation: moveCarousel 7s linear infinite;
+  animation-delay: 2s; /* Add a 2-second delay before the animation starts */
+
+}
+
+@keyframes moveCarousel {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.carousel-item {
+  min-width: 100%;
+}
+#botona:hover{
+background-color: #CF1512;
+}
+.ism{
+  width: 15px;
+  margin-left: 170px;
+  position:absolute;
+}
+.ism2{
+  width: 17px;
+  margin-left: 176px;
+  position:absolute;
+}
+.ism3{
+  width: 17px;
+  margin-left: 178px;
+  position:absolute;
+}
+.carousel-container {
+  overflow: hidden; /* Hide the overflowing items */
+  width: 100%; /* Adjust as per your layout */
+  position: relative;
+}
+
+.carousel-items {
+  display: flex;
+  width: 400%; /* 4 items */
+  animation: moveCarousel 16s linear infinite;
+  animation-delay: 2s; /* Add a 2-second delay before the animation starts */
+}
+
+.carousel-itemm {
+  min-width: 25%; /* Each item takes up 1/4th of the total width */
+}
+
+@keyframes moveCarousel {
+  0%, 10% {
+    transform: translateX(0);
+  }
+  25%, 35% {
+    transform: translateX(-25%);
+  }
+  50%, 60% {
+    transform: translateX(-50%);
+  }
+  75%, 85% {
+    transform: translateX(-75%);
+  }
+  90% {
+    transform: translateX(-94%);
+  }
+  100% {
+    transform: translateX(-99.99%); /* Slightly move back to avoid white space */
+  }
+
+}
+
+
+
+
